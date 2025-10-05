@@ -47,7 +47,7 @@ x-codeSamples:
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model": "venice-pro",
+          "model": "venice-pro",
           messages: [{ role: "user", content: "Hello Venice" }]
         })
       });
