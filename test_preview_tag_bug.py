@@ -76,8 +76,8 @@ def get_tags_used_in_operations(spec: Dict[str, Any]) -> Set[str]:
     
     for path, operations in paths.items():
         if not isinstance(operations, dict):
+            print(f"Warning: Operations for path '{path}' is not a dict (type: {type(operations).__name__}), skipping.")
             continue
-            
         for method, operation in operations.items():
             if isinstance(operation, dict) and 'tags' in operation:
                 operation_tags = operation['tags']
